@@ -104,15 +104,21 @@ aleatorio.addEventListener('click', function () {
 
   /// condiçao para nao repetir
 
-  if (numero === currentItem) {
-    numero++;
-    currentItem = numero;
-    mostrar(numero);
-  } else {
-    mostrar(numero);
-  }
+  do {
+    gerarNumero();
+  } while (numero === currentItem);
 
   currentItem = numero;
 
-  //   mostrar(numero);
+  /// plotar
+  mostrar(currentItem);
+
+  //   if (numero === currentItem) {
+  //     numero++;
+  //     currentItem = numero;
+  //     mostrar(numero);
+  //   } else {
+  //     currentItem = numero;
+  //     mostrar(numero);
+  //   }
 });
